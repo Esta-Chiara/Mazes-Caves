@@ -1,0 +1,36 @@
+# .editorconfig для Google Style Guide
+
+root = true
+
+[*.{cs}]
+# Размер отступа
+indent_size = 4
+# Использовать пробелы вместо табуляции
+indent_style = space
+# Конец строки
+end_of_line = lf
+# Удаление пробелов в конце строк
+trim_trailing_whitespace = true
+# Вставка новой строки в конце файла
+insert_final_newline = true
+# Максимальная длина строки
+max_line_length = 100
+
+# Дополнительные правила стиля
+# Порядок using-ов
+dotnet_sort_system_directives_first = true
+# Проверка на неиспользуемые using-ы
+dotnet_separate_import_directive_groups = true
+# Использование var
+csharp_style_var_for_built_in_types = false
+csharp_style_var_when_type_is_apparent = false
+csharp_style_var_elsewhere = false
+# Форматирование выражений
+csharp_new_line_before_open_brace = all
+csharp_new_line_before_members_in_object_initializers = true
+csharp_new_line_before_members_in_anonymous_types = true
+csharp_new_line_before_catch = true
+csharp_new_line_before_else = true
+csharp_new_line_before_finally = true
+# Использование фигурных скобок
+csharp_prefer_braces = true

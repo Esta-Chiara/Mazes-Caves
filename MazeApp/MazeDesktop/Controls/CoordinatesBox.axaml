@@ -1,0 +1,29 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:controls="using:MazeDesktop.Controls"
+        xmlns:converters="clr-namespace:MazeDesktop.Converters">
+  <Design.PreviewWith>
+    <controls:CoordinatesBox />
+  </Design.PreviewWith>
+
+  <Style Selector="controls|CoordinatesBox">
+	  <Style.Resources>
+		  <converters:IntToDecimalConverter x:Key="IntToDecimalConverter" />
+	  </Style.Resources>
+	
+	  <!-- Set Defaults -->
+	  <Setter Property="Template">
+		  <ControlTemplate>
+			  <NumericUpDown
+				Background="Azure" BorderBrush="Aquamarine"
+				ShowButtonSpinner="False"
+				Minimum="1"
+				Maximum="50"
+				Increment="1"
+				FormatString="F0"
+				ParsingNumberStyle="Integer"
+				Value="{TemplateBinding Value, Converter={StaticResource IntToDecimalConverter}, Mode=TwoWay}"/>
+		  </ControlTemplate>
+	  </Setter>
+  </Style>
+</Styles>

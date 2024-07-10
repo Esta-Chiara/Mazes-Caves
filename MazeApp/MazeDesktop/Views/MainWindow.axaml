@@ -1,0 +1,65 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:MazeDesktop.ViewModels"
+		xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:views="clr-namespace:MazeDesktop.Views"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="MazeDesktop.Views.MainWindow"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="MazeDesktop"
+		Background="LightCyan"
+		Width="850" Height="600"
+        CanResize="False">
+	<Window.Styles>
+		<!-- Base button style -->
+		<Style Selector="Button">
+			<Setter Property="Background" Value="Azure"/>
+			<Setter Property="Foreground" Value="Black"/>
+			<Setter Property="BorderBrush" Value="Aquamarine"/>
+			<Setter Property="BorderThickness" Value="2"/>
+			<Setter Property="Template">
+				<ControlTemplate>
+					<Border Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+							Padding="6">
+						<ContentPresenter HorizontalAlignment="Center"
+                                          VerticalAlignment="Center"
+                                          Content="{TemplateBinding Content}"
+                                          Foreground="{TemplateBinding Foreground}"/>
+					</Border>
+				</ControlTemplate>
+			</Setter>
+		</Style>
+
+		<!-- Button color when pressed -->
+		<Style Selector="Button:pressed">
+			<Setter Property="Background" Value="Aqua"/>
+			<Setter Property="Foreground" Value="White"/>
+		</Style>
+
+		<!-- Button color when hovered -->
+		<Style Selector="Button:pointerover">
+			<Setter Property="Background" Value="Aquamarine"/>
+			<Setter Property="Foreground" Value="White"/>
+		</Style>
+
+		<!-- Disabled button style -->
+		<Style Selector="Button:disabled">
+			<Setter Property="Background" Value="Azure"/>
+			<Setter Property="Foreground" Value="DarkGray"/>
+		</Style>
+
+		<!-- Button color when pressed -->
+		<Style Selector="Button:pointerpressed">
+			<Setter Property="Background" Value="Aqua"/>
+			<Setter Property="Foreground" Value="White"/>
+		</Style>
+
+	</Window.Styles>
+	
+	<StackPanel>
+		<views:MainView HorizontalAlignment="Center" VerticalAlignment="Center" />
+	</StackPanel>
+</Window>

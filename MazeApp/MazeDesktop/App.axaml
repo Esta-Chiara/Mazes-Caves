@@ -1,0 +1,22 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:controls="using:MazeDesktop.Controls"
+			 x:Class="MazeDesktop.App"
+             RequestedThemeVariant="Default">
+             <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
+	<Application.Resources>
+		<!-- limits for NumericUpDown -->
+		
+		<x:Decimal  x:Key="MinSize">2</x:Decimal >
+		<x:Decimal  x:Key="MaxSize">50</x:Decimal >
+	</Application.Resources>
+
+	<Application.Styles>
+		<FluentTheme />
+		<StyleInclude Source="/Controls/LimitedSizeUpDown.axaml"/>
+		<StyleInclude Source="/Controls/LimitsUpDown.axaml"/>
+		<StyleInclude Source="/Controls/CoordinatesBox.axaml"/>
+		<StyleInclude Source="/Controls/BirthChanceUpDown.axaml"/>
+		<StyleInclude Source="/Controls/TimeIntervalUpDown.axaml"/>
+	</Application.Styles>
+</Application>

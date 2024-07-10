@@ -1,0 +1,390 @@
+{
+  "format": 1,
+  "restore": {
+    "G:\\Downloads\\Mazes-Caves-main\\MazeApp\\MazeDesktop\\MazeDesktop.csproj": {}
+  },
+  "projects": {
+    "G:\\Downloads\\Mazes-Caves-main\\MazeApp\\AIMazeSolver\\AIMazeSolver.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "G:\\Downloads\\Mazes-Caves-main\\MazeApp\\AIMazeSolver\\AIMazeSolver.csproj",
+        "projectName": "AIMazeSolver",
+        "projectPath": "G:\\Downloads\\Mazes-Caves-main\\MazeApp\\AIMazeSolver\\AIMazeSolver.csproj",
+        "packagesPath": "C:\\Users\\Esta_Chiara\\.nuget\\packages\\",
+        "outputPath": "G:\\Downloads\\Mazes-Caves-main\\MazeApp\\AIMazeSolver\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Program_Files(x86)\\Microsoft_Visual_Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Esta_Chiara\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "G:\\Downloads\\Mazes-Caves-main\\MazeApp\\CommonCore\\CommonCore.csproj": {
+                "projectPath": "G:\\Downloads\\Mazes-Caves-main\\MazeApp\\CommonCore\\CommonCore.csproj"
+              },
+              "G:\\Downloads\\Mazes-Caves-main\\MazeApp\\MazeCore\\MazeCore.csproj": {
+                "projectPath": "G:\\Downloads\\Mazes-Caves-main\\MazeApp\\MazeCore\\MazeCore.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "G:\\Downloads\\Mazes-Caves-main\\MazeApp\\CaveCore\\CaveCore.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "G:\\Downloads\\Mazes-Caves-main\\MazeApp\\CaveCore\\CaveCore.csproj",
+        "projectName": "CaveCore",
+        "projectPath": "G:\\Downloads\\Mazes-Caves-main\\MazeApp\\CaveCore\\CaveCore.csproj",
+        "packagesPath": "C:\\Users\\Esta_Chiara\\.nuget\\packages\\",
+        "outputPath": "G:\\Downloads\\Mazes-Caves-main\\MazeApp\\CaveCore\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Program_Files(x86)\\Microsoft_Visual_Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Esta_Chiara\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "G:\\Downloads\\Mazes-Caves-main\\MazeApp\\CommonCore\\CommonCore.csproj": {
+                "projectPath": "G:\\Downloads\\Mazes-Caves-main\\MazeApp\\CommonCore\\CommonCore.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "G:\\Downloads\\Mazes-Caves-main\\MazeApp\\CommonCore\\CommonCore.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "G:\\Downloads\\Mazes-Caves-main\\MazeApp\\CommonCore\\CommonCore.csproj",
+        "projectName": "CommonCore",
+        "projectPath": "G:\\Downloads\\Mazes-Caves-main\\MazeApp\\CommonCore\\CommonCore.csproj",
+        "packagesPath": "C:\\Users\\Esta_Chiara\\.nuget\\packages\\",
+        "outputPath": "G:\\Downloads\\Mazes-Caves-main\\MazeApp\\CommonCore\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Program_Files(x86)\\Microsoft_Visual_Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Esta_Chiara\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "G:\\Downloads\\Mazes-Caves-main\\MazeApp\\MazeCore\\MazeCore.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "G:\\Downloads\\Mazes-Caves-main\\MazeApp\\MazeCore\\MazeCore.csproj",
+        "projectName": "MazeCore",
+        "projectPath": "G:\\Downloads\\Mazes-Caves-main\\MazeApp\\MazeCore\\MazeCore.csproj",
+        "packagesPath": "C:\\Users\\Esta_Chiara\\.nuget\\packages\\",
+        "outputPath": "G:\\Downloads\\Mazes-Caves-main\\MazeApp\\MazeCore\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Program_Files(x86)\\Microsoft_Visual_Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Esta_Chiara\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "G:\\Downloads\\Mazes-Caves-main\\MazeApp\\CommonCore\\CommonCore.csproj": {
+                "projectPath": "G:\\Downloads\\Mazes-Caves-main\\MazeApp\\CommonCore\\CommonCore.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "G:\\Downloads\\Mazes-Caves-main\\MazeApp\\MazeDesktop\\MazeDesktop.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "G:\\Downloads\\Mazes-Caves-main\\MazeApp\\MazeDesktop\\MazeDesktop.csproj",
+        "projectName": "MazeDesktop",
+        "projectPath": "G:\\Downloads\\Mazes-Caves-main\\MazeApp\\MazeDesktop\\MazeDesktop.csproj",
+        "packagesPath": "C:\\Users\\Esta_Chiara\\.nuget\\packages\\",
+        "outputPath": "G:\\Downloads\\Mazes-Caves-main\\MazeApp\\MazeDesktop\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Program_Files(x86)\\Microsoft_Visual_Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Esta_Chiara\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "G:\\Downloads\\Mazes-Caves-main\\MazeApp\\AIMazeSolver\\AIMazeSolver.csproj": {
+                "projectPath": "G:\\Downloads\\Mazes-Caves-main\\MazeApp\\AIMazeSolver\\AIMazeSolver.csproj"
+              },
+              "G:\\Downloads\\Mazes-Caves-main\\MazeApp\\CaveCore\\CaveCore.csproj": {
+                "projectPath": "G:\\Downloads\\Mazes-Caves-main\\MazeApp\\CaveCore\\CaveCore.csproj"
+              },
+              "G:\\Downloads\\Mazes-Caves-main\\MazeApp\\CommonCore\\CommonCore.csproj": {
+                "projectPath": "G:\\Downloads\\Mazes-Caves-main\\MazeApp\\CommonCore\\CommonCore.csproj"
+              },
+              "G:\\Downloads\\Mazes-Caves-main\\MazeApp\\MazeCore\\MazeCore.csproj": {
+                "projectPath": "G:\\Downloads\\Mazes-Caves-main\\MazeApp\\MazeCore\\MazeCore.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Avalonia": {
+              "target": "Package",
+              "version": "[11.0.11, )"
+            },
+            "Avalonia.BuildServices": {
+              "target": "Package",
+              "version": "[0.0.31, )"
+            },
+            "Avalonia.Diagnostics": {
+              "target": "Package",
+              "version": "[11.0.11, )"
+            },
+            "Avalonia.Fonts.Inter": {
+              "target": "Package",
+              "version": "[11.0.11, )"
+            },
+            "Avalonia.ReactiveUI": {
+              "target": "Package",
+              "version": "[11.0.11, )"
+            },
+            "Avalonia.Themes.Fluent": {
+              "target": "Package",
+              "version": "[11.0.11, )"
+            },
+            "MessageBox.Avalonia": {
+              "target": "Package",
+              "version": "[3.1.5.1, )"
+            },
+            "System.Reactive": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:controls="using:MazeDesktop.Controls">
+  <Design.PreviewWith>
+    <controls:BirthChanceUpDown />
+  </Design.PreviewWith>
+
+  <Style Selector="controls|BirthChanceUpDown">
+    <!-- Set Defaults -->
+    <Setter Property="Template">
+      <ControlTemplate>
+		  <NumericUpDown
+				  Background="Azure" BorderBrush="Aquamarine"
+				  Minimum="0"
+				  Maximum="1"
+				  Increment="0.01"
+				  Value="{TemplateBinding Value, Mode=TwoWay}"/>
+	  </ControlTemplate>
+    </Setter>
+  </Style>
+</Styles>

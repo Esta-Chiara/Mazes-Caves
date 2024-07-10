@@ -1,0 +1,201 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:MazeDesktop.ViewModels"
+			 xmlns:local="clr-namespace:MazeDesktop.Controls"
+			 xmlns:views="clr-namespace:MazeDesktop.Views"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="MazeDesktop.Views.MainView"
+             x:DataType="vm:MainViewModel"
+			 >
+
+	<StackPanel >
+		<TabControl>
+
+			<TabItem Header="Maze" >
+				<StackPanel>
+					<StackPanel Orientation="Horizontal">
+						<Canvas Background="Aqua" x:Name="MazeCanvas" Width="500" Height="500">
+							<local:MazePainter MazePuzzle="{Binding MazePuzzle}"
+											   Route="{Binding Route}" 
+											   HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+						</Canvas>
+
+						<StackPanel Margin="5 5" Orientation="Vertical" Width="290">
+							<StackPanel>
+								<!--Buttons row-->
+								<StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+									<Button Margin="10 10 10 5" Name="OpenFileButton" Content="Open" Command="{Binding OpenFileCommand}" />
+									<Button Margin="10 10 10 5" Name="GenerateMazeButton" Content="Generate" Command="{Binding GenerateMazeCommand}" />
+									<Button Margin="10 10 10 5" Name="SaveMazeButton" Content="Save" Command="{Binding SaveMazeCommand}" />
+								</StackPanel>
+
+								<Border BorderBrush="Aqua"
+										BorderThickness="2"
+										CornerRadius="5"
+										Padding="10" Margin="10 5" >
+								
+									<Grid HorizontalAlignment="Center"
+										ColumnDefinitions="Auto, 115"
+										RowDefinitions="Auto, Auto">
+										<Label Grid.Row="0" Grid.Column="0" Margin="10">Rows count</Label>
+										<local:LimitedSizeUpDown Grid.Row="0" Grid.Column="1" Margin="0 5"
+													   Value="{Binding RowsCount, Mode=TwoWay}"/>
+										<Label Grid.Row="1" Grid.Column="0" Margin="10">Colls count</Label>
+										<local:LimitedSizeUpDown Grid.Row="1" Grid.Column="1" Margin="0 5"
+													   Value="{Binding ColsCount, Mode=TwoWay}" />
+										
+									</Grid>
+								</Border>
+							</StackPanel>
+
+							<Border BorderBrush="Aqua"
+														BorderThickness="2"
+														CornerRadius="5"
+														Padding="10" Margin="10" >
+								<StackPanel>
+									<Grid ShowGridLines="False" Margin="5"
+									ColumnDefinitions="Auto, Auto, Auto"
+									RowDefinitions="Auto, Auto">
+										<Label Grid.Row="0" Grid.Column="0" Margin="10">Start</Label>
+										<local:CoordinatesBox Grid.Row="0" Grid.Column="1" Margin="2 5"
+															  Value="{Binding StartRow, Mode=TwoWay}"/>
+										<local:CoordinatesBox Grid.Row="0" Grid.Column="2" Margin="2 5"
+															  Value="{Binding StartCol, Mode=TwoWay}"/>
+										<Label Grid.Row="1" Grid.Column="0" Margin="10">Finish</Label>
+										<local:CoordinatesBox Grid.Row="1" Grid.Column="1" Margin="2 5"
+													   Value="{Binding FinishRow, Mode=TwoWay}"/>
+										<local:CoordinatesBox Grid.Row="1" Grid.Column="2" Margin="2 5"
+													   Value="{Binding FinishCol, Mode=TwoWay}"/>
+
+									</Grid>
+									<Button Margin="10 0" HorizontalAlignment="Center" 
+											Name="SolveMazeButton" 
+											Content="Solve Maze" 
+											Command="{Binding SolveMazeCommand}" />
+								
+								</StackPanel>
+							</Border>
+						</StackPanel>
+					</StackPanel>
+					
+				</StackPanel>
+			</TabItem>
+
+			<TabItem Header="Cave" >
+				<StackPanel Orientation="Horizontal">
+					<Canvas Background="Aqua" x:Name="CaveCanvas" Width="500" Height="500">
+						<local:CavePainter CavePuzzle="{Binding Cave}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+					</Canvas>
+					
+					<StackPanel Margin="5 5" Orientation="Vertical" Width="290">
+						<Button HorizontalAlignment="Center" 
+								Content="Open File"
+								Name="OpenCaveButton"
+								Command="{Binding OpenCaveButtonCommand}" />
+
+						<Border BorderBrush="Aqua"
+								BorderThickness="2"
+								CornerRadius="5"
+								Padding="5" Margin="5" >
+							<StackPanel Orientation="Vertical">
+								<TextBlock VerticalAlignment="Top"
+										   HorizontalAlignment="Center"
+										   FontWeight="DemiBold"
+										   Foreground="Black">Size</TextBlock>
+
+								<Grid ShowGridLines="False"
+									  HorizontalAlignment="Center"
+									  ColumnDefinitions="Auto, 115"
+									  RowDefinitions="Auto, Auto">
+									<Label Grid.Row="0" Grid.Column="0" Margin="0 10">Rows count</Label>
+									<local:LimitedSizeUpDown Grid.Row="0" Grid.Column="1" Margin="0 5"
+										   Value="{Binding CaveRowsCount, Mode=TwoWay}"/>
+									<Label Grid.Row="1" Grid.Column="0" Margin="0 10">Colls count</Label>
+									<local:LimitedSizeUpDown Grid.Row="1" Grid.Column="1" Margin="0 5"
+										   Value="{Binding CaveCollsCount, Mode=TwoWay}"/>
+								</Grid>
+							</StackPanel>
+						</Border>
+						
+						<Border BorderBrush="Aqua"
+										BorderThickness="2"
+										CornerRadius="5"
+										Padding="5" Margin="5" >
+							<StackPanel Orientation="Vertical">
+								<TextBlock VerticalAlignment="Top"
+										   HorizontalAlignment="Center"
+										   FontWeight="DemiBold"
+										   Foreground="Black">Generation settings</TextBlock>
+									<Grid ShowGridLines="False"
+										  HorizontalAlignment="Center"
+										  ColumnDefinitions="Auto, 115"
+										  RowDefinitions="Auto, Auto, Auto">
+								
+										<Label Grid.Row="0" Grid.Column="0" Margin="0 10">"birth" limit</Label>
+										<local:LimitsUpDown Grid.Row="0"  Grid.Column="1" Margin="0 5" Value="{Binding BirthLimit, Mode=TwoWay}" />
+
+										<Label Grid.Row="1" Grid.Column="0" Margin="0 10">"death" limit</Label>
+										<local:LimitsUpDown Grid.Row="1"  Grid.Column="1" Margin="0 5" Value="{Binding DeathLimit, Mode=TwoWay}" />
+
+										<Label Grid.Row="2" Grid.Column="0" Margin=" 0 10">"birth" chance</Label>
+										<local:BirthChanceUpDown Grid.Row="2"  Grid.Column="1" Margin="0 5"
+													   Value="{Binding BirthChance, Mode=TwoWay}" />
+										
+									</Grid>
+								</StackPanel>
+						</Border>
+						<StackPanel Orientation="Vertical">
+							<Border BorderBrush="Aqua"
+											BorderThickness="2"
+											CornerRadius="5"
+											Padding="10" Margin="5" >
+									
+								<StackPanel Orientation="Vertical">
+									<TextBlock VerticalAlignment="Top" 
+											   HorizontalAlignment="Center" 
+										       FontWeight="DemiBold"
+											   Foreground="Black"> Generate Cave</TextBlock>
+										<Button Margin="0 5"
+												HorizontalAlignment="Center"
+												Content="Apply settings and init new cave"
+												Command="{Binding InitCaveCommand}"/>
+									<TextBlock Padding="5" 
+											   HorizontalAlignment="Left">  Time between steps</TextBlock>
+									
+									<StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+										<local:TimeIntervalUpDown Value="{Binding TimeInterval, Mode=TwoWay}" />
+										<Button Margin="10 0"
+												Command="{Binding AutoGenerateCaveCommand}">
+											<Image Source="avares://MazeDesktop/Assets/play.png"
+												   Width="20" Height="20" 
+												   VerticalAlignment="Center" 
+												   HorizontalAlignment="Center" />
+										</Button>
+										<Button Command="{Binding NextGenerationStepCommand}">
+											<Image Source="avares://MazeDesktop/Assets/next.png"
+												   Width="20" Height="20"
+												   VerticalAlignment="Center"
+												   HorizontalAlignment="Center" />
+										</Button>
+
+									</StackPanel>
+								</StackPanel>
+									</Border>
+						</StackPanel>
+					</StackPanel>
+					
+				</StackPanel>
+			</TabItem>
+
+			<TabItem Header="AIMazeSolver">
+				<StackPanel>
+					<views:AIMazeSolverView HorizontalAlignment="Center" VerticalAlignment="Center" />
+				</StackPanel>
+			</TabItem>
+			
+		</TabControl>
+	
+	</StackPanel>
+</UserControl>
